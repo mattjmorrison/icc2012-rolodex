@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ ! -d 'reports' ]; then
+	mkdir reports
+fi
+
+npm install
+./node_modules/jshint/bin/hint rolodex/src --jslint-reporter > reports/jshint.xml
+
+exit 0

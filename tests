@@ -1,0 +1,8 @@
+#!/bin/bash
+
+npm install
+node testrunner.js rolodex --junitreport
+./node_modules/jshint/bin/hint rolodex/src --jslint-reporter > reports/jshint.xml
+echo $?
+
+exit 0
